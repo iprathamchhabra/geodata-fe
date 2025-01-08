@@ -13,7 +13,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8080/register', formData);
+      const response = await axios.post('https://geodata-be.railway.internal/register', formData);
       console.log(response.data);
       alert("Registration successful!")
       setFormData({ fullname: '', email: '', password: '' });
