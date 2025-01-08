@@ -29,7 +29,7 @@ const Map = () => {
   useEffect(() => {
     const fetchCoordinates = async () => {
       try {
-        const response = await axios.get("https://geodata-be.railway.internal/geodata/list");
+        const response = await axios.get("https://geodata-be-production.up.railway.app/geodata/list");
         const userid = localStorage.getItem("userId");
 
         const data = response.data

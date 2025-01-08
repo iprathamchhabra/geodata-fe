@@ -17,7 +17,7 @@ const Upload = () => {
   }, []);
 
   const fetchGeoData = async (id) => {
-    const baseURL = `https://geodata-be.railway.internal/geodata/user?user_id=${id}`;
+    const baseURL = `https://geodata-be-production.up.railway.app/geodata/user?user_id=${id}`;
     try {
       const response = await axios.get(baseURL);
       setGeoDataList(response.data);
@@ -45,7 +45,7 @@ const Upload = () => {
     setLoading(true);
 
     try {
-      await axios.post("https://geodata-be.railway.internal/geodata", formData, {
+      await axios.post("https://geodata-be-production.up.railway.app/geodata", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       alert("File uploaded successfully");

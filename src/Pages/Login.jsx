@@ -10,7 +10,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("https://geodata-be.railway.internal/login", {
+      const response = await axios.post("https://geodata-be-production.up.railway.app/login", {
         email,
         password,
       });
